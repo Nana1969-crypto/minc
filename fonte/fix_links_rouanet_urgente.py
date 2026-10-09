@@ -6,7 +6,8 @@ IN29 = "https://www.gov.br/cultura/pt-br/acesso-a-informacao/legislacao-e-normat
 LEI = "https://www.planalto.gov.br/ccivil_03/leis/l8313cons.htm"
 LEI_COMPILADA = "https://www.planalto.gov.br/ccivil_03/leis/l8313compilada.htm"
 PORTAL = "https://www.gov.br/cultura/pt-br/assuntos/lei-rouanet"
-MANUAIS = "https://www.gov.br/cultura/pt-br/centrais-de-conteudo/marcas-e-logotipos/marcas-rouanet/marcas-do-pronac"
+# A página "marcas-do-pronac" (Manuais e marcas) exige login no gov.br; usar o PDF público do manual.
+MANUAIS = "https://www.gov.br/cultura/pt-br/centrais-de-conteudo/marcas-e-logotipos/marcas-rouanet/ManualdoProponenteIN2026DEFINITIVO2.pdf"
 SALIC = "https://salic.cultura.gov.br/"
 
 def remap(uri):
@@ -14,7 +15,7 @@ def remap(uri):
     if "gamma.app" in u: return None
     if "planalto.gov.br" in u and "8313" in u: return LEI
     if "lei-rouanet-1" in u: return PORTAL
-    if "ManualdoProponente" in u: return MANUAIS
+    if "ManualdoProponente" in u or "marcas-do-pronac" in u: return MANUAIS
     if "instrucao-normativa-minc-no-29" in u: return IN29
     if "salic.cultura.gov.br" in u: return SALIC
     return u
