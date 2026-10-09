@@ -3,7 +3,7 @@ Uso: python3 -I fix_links.py entrada.pdf saida.pdf"""
 import sys, pymupdf as fitz
 
 IN29 = "https://www.gov.br/cultura/pt-br/acesso-a-informacao/legislacao-e-normativas/instrucao-normativa-minc-no-29-de-29-de-janeiro-de-2026"
-LEI = "https://www.planalto.gov.br/ccivil_03/leis/l8313cons.htm"
+LEI = "https://www.planalto.gov.br/ccivil_03/LEIS/L8313cons.htm"
 LEI_COMPILADA = "https://www.planalto.gov.br/ccivil_03/leis/l8313compilada.htm"
 PORTAL = "https://www.gov.br/cultura/pt-br/assuntos/lei-rouanet"
 # A página "marcas-do-pronac" (Manuais e marcas) exige login no gov.br; usar o PDF público do manual.
