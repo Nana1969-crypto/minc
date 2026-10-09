@@ -5,7 +5,8 @@ import sys, pymupdf as fitz
 IN29 = "https://www.gov.br/cultura/pt-br/acesso-a-informacao/legislacao-e-normativas/instrucao-normativa-minc-no-29-de-29-de-janeiro-de-2026"
 LEI = "https://www.planalto.gov.br/ccivil_03/LEIS/L8313cons.htm"
 LEI_COMPILADA = "https://www.planalto.gov.br/ccivil_03/leis/l8313compilada.htm"
-PORTAL = "https://www.gov.br/cultura/pt-br/assuntos/lei-rouanet"
+# A página "assuntos/lei-rouanet" exige login no gov.br; manter o endereço original do guia.
+PORTAL = "https://www.gov.br/cultura/pt-br/assuntos/acoes-programas-e-politicas/lei-rouanet-1"
 # A página "marcas-do-pronac" (Manuais e marcas) exige login no gov.br; usar o PDF público do manual.
 MANUAIS = "https://www.gov.br/cultura/pt-br/centrais-de-conteudo/marcas-e-logotipos/marcas-rouanet/ManualdoProponenteIN2026DEFINITIVO2.pdf"
 SALIC = "https://salic.cultura.gov.br/"
@@ -14,7 +15,6 @@ def remap(uri):
     u = uri or ""
     if "gamma.app" in u: return None
     if "planalto.gov.br" in u and "8313" in u: return LEI
-    if "lei-rouanet-1" in u: return PORTAL
     if "ManualdoProponente" in u or "marcas-do-pronac" in u: return MANUAIS
     if "instrucao-normativa-minc-no-29" in u: return IN29
     if "salic.cultura.gov.br" in u: return SALIC
